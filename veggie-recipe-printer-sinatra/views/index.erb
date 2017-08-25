@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roasted Brussels Sprouts Recipe!</title>
+  </head>
+
+  <body>
+    <h1>
+      <%= @name %>
+    </h1>
+
+    <ul>
+      <% @ingredients.each do |ingredient| %>
+        <li><%= ingredient %></li>
+      <% end %>
+    </ul>
+
+    <ol>
+      <% @directions.each do |direction| %>
+        <li><%= direction %></li>
+      <% end %>
+    </ol>
+
+    <h2>
+      Reviews:
+    </h2>
+
+    <ol>
+      <% @reviews.each do |review| %>
+        <li>
+          Reviewer: <%= review[:username] %><br>
+          Rating: <%= review[:rating] %><br>
+          Review: <%= review[:review] %>
+        </li>
+      <% end %>
+
+    </ol>
+
+  </body>
+</html>
